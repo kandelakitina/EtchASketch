@@ -15,12 +15,17 @@ function createGrid(parent, n) {
 
 createGrid(".container", 50);
 
+function getRandomColor() {
+    const rand = () => Math.floor(Math.random() * 256);
+    return `rgb(${rand()}, ${rand()}, ${rand()})`;
+}
+
 let container = document.querySelector(".container");
 container.addEventListener("mouseover", (e) => {
     let div = e.target.closest(".block");
     if (!div) return;
     if (!container.contains(div)) return;
-    e.target.style.background = "black";
+    e.target.style.background = getRandomColor();
 })
 
 let button = document.querySelector(".button");
