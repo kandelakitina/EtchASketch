@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     aspect-ratio: 1 / 1;
     padding: 10px;
+    width: 300px;
 }
 
 .block {
